@@ -1,5 +1,5 @@
 // #### Refactor Code ##########
-// 1. create arrow function instead of normal function
+// 1. create arrow function instead of regular function
 exports.inviteUser = async (req, res) => {
   // 2. Handle the exception, Wrap the code in try & catch
   try {
@@ -62,7 +62,7 @@ exports.inviteUser = async (req, res) => {
 
     // return error
     return res.status(500).send({
-      error: false,
+      error: true,
       data: {...invitationResponse.body},
       message: "Something wrong in authentication"
     });

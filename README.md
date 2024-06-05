@@ -54,7 +54,7 @@ exports.inviteUser = function(req, res) {
 # Step 1
 Analyse the function below and provide answers to the following questions:
  * What do you think is wrong with the code, if anything?
-    I noticed two problem, first one is `Callback Hell` and 2nd one is that it's saving invitation doesn't matter its already exists or not, `if (shop.invitations.indexOf(invitationResponse.body.invitationId))`,  `=== -1` missing. The correct syntax is `if (shop.invitations.indexOf(invitationResponse.body.invitationId)=== -1)`
+    I noticed two problems: the first is `Callback Hell` and the second is that it's always saving invitation doesn't matter if it already exists or not: `if (shop.invitations.indexOf(invitationResponse.body.invitationId))`, `=== -1' is missing. The correct syntax is `if (shop.invitations.indexOf(invitationResponse.body.invitationId)=== -1)`
 
  * Can you see any potential problems that could lead to exceptions
     The code is written very old coding style, I noticed that `no exception handling` and response is not standardized. it should be standardized like
@@ -67,7 +67,7 @@ Analyse the function below and provide answers to the following questions:
     ```
 
  * How would you refactor this code to, Make it easier to read, Increase code reusability, Improve the stability of the system, Improve the testability of the code
-    I will describe some point here instead using of normal function use `arrow function`. using `var` but values are not changing in function better use `const`. Avoiding callback hell, I will use `async/await` function, better use `includes` instead of `indexOf` for readability.
+    I will describe some point here instead of using of regular function use `arrow function`. using `var` but values are not changing in function better use `const`. Avoiding callback hell, I will use `async/await` function, better use `includes` instead of `indexOf` for readability.
 
 
 # Step 2
